@@ -45,25 +45,33 @@ select {
   margin-top: 5px;
 }
 
- /* Controles táctiles encima del canvas */
+ /* Controles táctiles agrupados arriba, cada jugador a un lado */
 #touchControls {
   position: absolute;
-  top: 10px;           /* Arriba de la pantalla */
-  left: 50%;
-  transform: translateX(-50%);
-  pointer-events: none; /* permite que solo los botones reciban los eventos */
+  top: 10px;           /* arriba del canvas */
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  justify-content: space-between; /* jugador 1 izquierda, jugador 2 derecha */
+  pointer-events: none; /* solo los botones reciben eventos */
   z-index: 1000;
+  padding: 0 20px; /* espacio interno a los lados */
+  box-sizing: border-box;
 }
 
-/* Grupo de botones (fila) */
+/* Cada grupo de botones */
 .control-group {
   display: flex;
+  flex-direction: column; /* dirección vertical */
+  align-items: center;
   gap: 10px;
-  pointer-events: auto; /* reactiva los eventos solo para los botones */
+  pointer-events: auto; /* reactiva eventos solo para botones */
+}
+
+/* Fila de botones dentro de cada grupo */
+.control-group div {
+  display: flex;
+  gap: 10px;
 }
 
 /* Botones de dirección */
@@ -72,7 +80,7 @@ select {
   border: 2px solid white;
   border-radius: 12px;
   color: white;
-  font-size: 2em;       /* más grande */
+  font-size: 2em;
   width: 70px;
   height: 70px;
   display: flex;
