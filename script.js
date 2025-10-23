@@ -78,11 +78,11 @@ function Goalie(x, y, imgSrc) {
 
 
 
-let player1 = new Player(100, 225, "/mes.png", 50);
-let player2 = new Player(600, 225, "/ron.png", 55);
-let goalie1 = new Goalie(40, 225, "/11.png");
-let goalie2 = new Goalie(660, 225, "/22.png");
-let ball = new Ball(350, 225, "/pelota.png", 25);
+let player1 = new Player(100, 225, "mes.png", 50);
+let player2 = new Player(600, 225, "ron.png", 55);
+let goalie1 = new Goalie(40, 225, "11.png");
+let goalie2 = new Goalie(660, 225, "22.png");
+let ball = new Ball(350, 225, "pelota.png", 25);
 
 let keys = {};
 document.addEventListener("keydown", e => keys[e.code] = true);
