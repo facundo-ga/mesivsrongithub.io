@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Futsal Game ⚽</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>
+    UNO CONTRA UNO </h1>
+ 
+  <canvas id="canvas" width="700" height="450"></canvas>
+
+  <div id="score">Jugador 1: 0 ⚽ Jugador 2: 0</div>
+  <div id="message">Usa WASD / Flechas para mover y ESPACIO para patear</div>
+  <label for="canchaSelect">Elegí la cancha:</label>
+<select id="canchaSelect">
+  <option value="/1.gif">Cancha animada (GIF)</option>
+  <option value="/cancha-futsal.jpg" selected>Cancha de futsal</option>
+  <option value="/cancha-verde.png">Cancha verde clásica</option>
+  <option value="/gif.gif">Cancha animada (GIF)</option>
+  <option value="/cancha-barrio.jpg" selected>Cancha de barrio</option>
+  <option value="/cancha-entrenamiento.gif">Cancha de practica</option>
+</select>
+<!-- 🎮 Controles táctiles -->
+<div id="touchControls">
+  <div class="control-group" id="leftControls">
+    <button class="btn" data-key="KeyW">⬆️</button>
+    <div>
+      <button class="btn" data-key="KeyA">⬅️</button>
+      <button class="btn" data-key="KeyS">⬇️</button>
+      <button class="btn" data-key="KeyD">➡️</button>
+    </div>
+    <button class="btn action" data-key="Space">⚽</button>
+  </div>
+
+  <div class="control-group" id="rightControls">
+    <button class="btn" data-key="ArrowUp">⬆️</button>
+    <div>
+      <button class="btn" data-key="ArrowLeft">⬅️</button>
+      <button class="btn" data-key="ArrowDown">⬇️</button>
+      <button class="btn" data-key="ArrowRight">➡️</button>
+    </div>
+    <button class="btn action" data-key="Enter">⚽</button>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+ 
+</body>
+
+</html>

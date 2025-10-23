@@ -1,0 +1,100 @@
+
+
+body {
+  background-image: url('/git.gif');
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+
+#canvas {
+  background-color: #007f4f;
+  border: 3px solid white;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-image: url('/cancha-futsal.png'); /* Imagen inicial */
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.8s ease-in-out, opacity 0.8s ease-in-out;
+}
+
+select {
+  background-color: #007f4f;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 4px;
+  margin-top: 10px;
+  border: 2px solid white;
+}
+
+#score {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#message {
+  font-size: 22px;
+  font-weight: bold;
+  color: yellow;
+  margin-top: 5px;
+}
+
+ /* Controles táctiles encima del canvas */
+  #touchControls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* permite que solo los botones reciban los eventos */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    pointer-events: auto; /* reactiva los eventos solo para los botones */
+  }
+
+  .control-group div {
+    display: flex;
+    gap: 6px;
+  }
+
+  .btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.4em;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: 0.15s;
+  }
+
+  .btn:active {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0.9);
+  }
+
+  .action {
+    background: gold;
+    color: black;
+    width: 70px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 12px;
+  }
