@@ -1,7 +1,7 @@
 
 
 body {
-  background-image: url('/git.gif');
+  background-image: url('git.gif');
   background-size: cover;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
   display: block;
   margin: 20px auto;
   border-radius: 10px;
-  background-image: url('/cancha-futsal.png'); /* Imagen inicial */
+  background-image: url('cancha-futsal.png'); /* Imagen inicial */
   background-size: cover;
   background-position: center;
   transition: background-image 0.8s ease-in-out, opacity 0.8s ease-in-out;
