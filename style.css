@@ -46,55 +46,53 @@ select {
 }
 
  /* Controles táctiles encima del canvas */
-  #touchControls {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* permite que solo los botones reciban los eventos */
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 10px;
-    box-sizing: border-box;
-  }
+#touchControls {
+  position: absolute;
+  top: 10px;           /* Arriba de la pantalla */
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none; /* permite que solo los botones reciban los eventos */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  z-index: 1000;
+}
 
-  .control-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    pointer-events: auto; /* reactiva los eventos solo para los botones */
-  }
+/* Grupo de botones (fila) */
+.control-group {
+  display: flex;
+  gap: 10px;
+  pointer-events: auto; /* reactiva los eventos solo para los botones */
+}
 
-  .control-group div {
-    display: flex;
-    gap: 6px;
-  }
+/* Botones de dirección */
+.btn {
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  border-radius: 12px;
+  color: white;
+  font-size: 2em;       /* más grande */
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.15s;
+}
 
-  .btn {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid white;
-    border-radius: 10px;
-    color: white;
-    font-size: 1.4em;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    transition: 0.15s;
-  }
+.btn:active {
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0.9);
+}
 
-  .btn:active {
-    background: rgba(255, 255, 255, 0.5);
-    transform: scale(0.9);
-  }
-
-  .action {
-    background: gold;
-    color: black;
-    width: 70px;
-    height: 50px;
-    font-weight: bold;
-    border-radius: 12px;
-  }
+/* Botón de acción */
+.action {
+  background: gold;
+  color: black;
+  width: 90px;
+  height: 70px;
+  font-weight: bold;
+  border-radius: 15px;
+  font-size: 1.6em;
+}
