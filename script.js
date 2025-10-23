@@ -390,9 +390,9 @@ function drawParticles() {
   });
 }
 
-const soundKick = new Audio("/kick.mp3");
-const soundGoal = new Audio("/goal.mp3");
-const soundBounce = new Audio("/bounce.mp3");
+const soundKick = new Audio("kick.mp3");
+const soundGoal = new Audio("goal.mp3");
+const soundBounce = new Audio("bounce.mp3");
 
 function loop() {
   movePlayers(); moveGoalies(); updateBall();
