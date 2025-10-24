@@ -45,15 +45,15 @@ select {
   margin-top: 5px;
 }
 
-/* Controles táctiles agrupados más centrados (3 cm más abajo y más al centro) */
+/* Controles táctiles agrupados más centrados */
 #touchControls {
   position: absolute;
-  top: 490px; /* antes era 10px → 3 cm aprox en pantallas comunes (~80px) */
+  top: 80px; /* aprox 3 cm desde arriba */
   left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-evenly; /* los mueve un poco hacia el centro */
-  pointer-events: none; /* solo los botones reciben eventos */
+  justify-content: space-between;
+  pointer-events: none;
   z-index: 1000;
   box-sizing: border-box;
 }
@@ -65,6 +65,15 @@ select {
   align-items: center;
   gap: 10px;
   pointer-events: auto;
+}
+
+/* Movimiento hacia el centro */
+.control-group:first-child {
+  margin-left: 20px;  /* mueve el de la izquierda 1 cm hacia adentro */
+}
+
+.control-group:last-child {
+  margin-right: 20px; /* mueve el de la derecha 1 cm hacia adentro */
 }
 
 /* Fila de botones dentro de cada grupo */
@@ -103,3 +112,5 @@ select {
   border-radius: 15px;
   font-size: 1.6em;
 }
+
+
