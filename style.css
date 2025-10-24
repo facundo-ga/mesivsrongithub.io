@@ -45,10 +45,10 @@ select {
   margin-top: 5px;
 }
 
-/* Controles táctiles agrupados más centrados */
+ /* Controles táctiles agrupados más centrados */
 #touchControls {
   position: absolute;
-  top: 80px; /* aprox 3 cm desde arriba */
+  top: 440px; /* aprox 3 cm desde arriba */
   left: 0;
   width: 100%;
   display: flex;
@@ -112,5 +112,3 @@ select {
   border-radius: 15px;
   font-size: 1.6em;
 }
-
-
